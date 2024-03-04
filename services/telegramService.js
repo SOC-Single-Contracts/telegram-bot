@@ -3,14 +3,13 @@ const TelegramBot = require('node-telegram-bot-api');
 const SelectOptions = require('../utils/constants');
 
 const Messages = require('../utils/messages');
-const {     
+const {
     handleMainSelection,
     handleSendResponse,
-    createNewGroup,
-    JoinGroup
-    } = require('./handlers');
 
-    require('dotenv').config();
+} = require('./handlers');
+
+require('dotenv').config();
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
 bot.on("polling_error", (msg) => console.log(msg));
@@ -18,164 +17,113 @@ bot.on("polling_error", (msg) => console.log(msg));
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
     const messageText = msg.text;
-  
+
     if (messageText === '/start') {
-        handleStart(chatId, bot); // Passing bot instance to handleStart
+        handleStart(chatId, bot);
     }
 });
-
 bot.on('callback_query', (query) => {
     const chatId = query.message.chat.id;
     const user = query.from.username;
     const option = query.data;
 
     switch (option) {
+        case 'Blockchain':
+            handleMainSelection(chatId, bot, SelectOptions.BLOCKCHAIN_DEVELOPMENT, "Blockchain service");
+            break;
+        case 'MERN':
+            handleMainSelection(chatId, bot, SelectOptions.MERN_OPTIONS, "MERN stack service");
+            break;
         case 'Marketing':
-            handleMainSelection(chatId, bot, SelectOptions.MARKETING_OPTIONS, "Marketing services");
+            handleMainSelection(chatId, bot, SelectOptions.DIGITAL_MARKETING, "Digital Marketing service");
             break;
-        case 'Launchpad':
-            handleMainSelection(chatId, bot, SelectOptions.LAUNCHPAD_OPTIONS, "Launchpad option" );
-            break;
-        case 'Centralised Exchange':
-            handleMainSelection(chatId, bot, SelectOptions.CENTRALISED_EXCHANGE_OPTIONS, "Centralised Exchange option");
-            break;
-        case 'DEX':
-            handleMainSelection(chatId, bot, SelectOptions.DEX_OPTIONS, "Decentralised Exchange services");
-            break;
-        case 'Market Maker':
-            handleMainSelection(chatId, bot, SelectOptions.MARKET_MAKER_OPTIONS, "Market Maker services");
-            break;
-        case 'Press Release':
-            handleMainSelection(chatId, bot, SelectOptions.PRESS_RELEASE_OPTIONS, "press-release services");
-            break;
-        case 'Audit/KYC':
-            handleMainSelection(chatId, bot, SelectOptions.AUDIT_KYC_OPTIONS, "Audit KYC services");
-            break;
-        case 'CMC/CG':
-            handleMainSelection(chatId, bot, SelectOptions.sCMC_CG_OPTIONS, "CMC & CG services");
-            break;
-        case 'Trending':
-            handleSendResponse(chatId, bot, Messages.Trending_Message);
+        case 'Software Development':
+            handleMainSelection(chatId, bot, SelectOptions.CUSTOM_SOFTWARE_DEVELOPMENT, "Custom Software Development service");
             break;
 
-        case 'Telegram':
-            handleSendResponse(chatId, bot, Messages.Telegram_Message);
+        case 'Web Application Development':
+            handleSendResponse(chatId, bot, Messages.MERN_Web_Message, "Web Application Development");
             break;
-        case 'Twitter':
-            handleSendResponse(chatId, bot,Messages.Twitter_Message);
+        case 'Mobile App Development':
+            handleSendResponse(chatId, bot, Messages.MERN_Mobile_Message, "Mobile App Development");
             break;
-        case 'Youtube':
-            handleSendResponse(chatId, bot,Messages.Youtube_Message);
+        case 'API Development':
+            handleSendResponse(chatId, bot, Messages.MERN_API_Message, "API Development");
             break;
-        case 'Binance AMA':
-            handleSendResponse(chatId, bot,Messages.BinanceAMA_Message);
+        case 'UI/UX Design':
+            handleSendResponse(chatId, bot, Messages.MERN_UI_UX_Message, "UI/UX Design");
             break;
-        case 'Twitter AMA':
-            handleSendResponse(chatId, bot, Messages.TwitterAMA_Message);
+
+        case 'DEX':
+            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_DEX, "DEX");
             break;
-        case 'Telegram AMA':
-            handleSendResponse(chatId, bot, Messages.TelegramAMA_Message);
-            break; 
-        case 'BSC Station':
-            handleSendResponse(chatId, bot, Messages.BSC_Station_Message);
-            break; 
-        case 'Kommunitas':
-            handleSendResponse(chatId, bot, Messages.Kommunitas_Message);
-            break; 
-        case 'BullPerks':
-            handleSendResponse(chatId, bot, Messages.BullPerks_Message);
-            break; 
-        case 'Binstarter':
-            handleSendResponse(chatId, bot, Messages.Binstarter_Message);
-            break; 
-        case 'Gempad':
-            handleSendResponse(chatId, bot, Messages.Gempad_Message);
-            break; 
-        case 'PinkSale':
-            handleSendResponse(chatId, bot, Messages.PinkSale_Message);
-            break; 
-        case 'Gate.io':
-            handleSendResponse(chatId, bot, Messages.GateIo_Message);
-            break; 
-        case 'Bitget':
-            handleSendResponse(chatId, bot, Messages.Bitgat_Message);
-            break; 
-        case 'Bybit':
-            handleSendResponse(chatId, bot, Messages.Bybit_Message);
-            break; 
-        case 'MEXC':
-            handleSendResponse(chatId, bot, Messages.MEXC_Message);
-            break; 
-        case 'XT.com':
-            handleSendResponse(chatId, bot, Messages.XTCom_Message);
-            break; 
-        case 'LBnak':
-            handleSendResponse(chatId, bot, Messages.LBank_Message);
-            break; 
-        case 'Bitmart':
-            handleSendResponse(chatId, bot, Messages.Bitmart_Message);
-            break; 
-        case 'Conistor':
-            handleSendResponse(chatId, bot, Messages.Coinstore_Message);
-            break; 
-        case 'Bitrue':
-            handleSendResponse(chatId, bot, Messages.Bitrue_Message);
+        case 'Private/Public Blockchain':
+            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_Private_Public_Blockchain, "Private/Public Blockchain");
             break;
-        case 'Ave.io':
-            handleSendResponse(chatId, bot, Messages.AveIo_Message);
-            break;   
-        case 'CLS':
-            handleSendResponse(chatId, bot, Messages.CLS_Message);
+        case 'DApps':
+            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_DApps, "DApps");
             break;
-        case 'Gotbit':
-            handleSendResponse(chatId, bot, Messages.Gotbit_Message);
+        case 'CEX':
+            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_CEX, "CEX");
             break;
-        case 'BitcoinGape':
-            handleSendResponse(chatId, bot, Messages.BitcoinGape_Message);
+        case 'DeFi':
+            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_DeFi, "DeFi");
             break;
-        case 'ChainWire':
-            handleSendResponse(chatId, bot, Messages.ChainWire_Message);
+        case 'CeFi':
+            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_CeFi, "CeFi");
             break;
-        case 'Certik':
-            handleSendResponse(chatId, bot, Messages.Certik_Message);
+        case 'Crypto Wallet':
+            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_Crypto, "Crypto Wallet");
             break;
-        case 'Hacken':
-            handleSendResponse(chatId, bot, Messages.Hacken_Message);
+        case 'Bridge':
+            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_Bridge, "Bridge");
             break;
-        case 'QuillsAudit':
-            handleSendResponse(chatId, bot, Messages.QuillsAudit_Message);
+
+        case 'SEO':
+            handleSendResponse(chatId, bot, Messages.DIGITAL_MARKETING_SEO, "SEO");
             break;
-        case 'CoinScope':
-            handleSendResponse(chatId, bot, Messages.CoinScope_Message);
+        case 'SEM':
+            handleSendResponse(chatId, bot, Messages.DIGITAL_MARKETING_SEM, "SEM");
             break;
-        case 'SlowMist':
-            handleSendResponse(chatId, bot, Messages.SlowMist_Message);
+        case 'SMM':
+            handleSendResponse(chatId, bot, Messages.DIGITAL_MARKETING_SMM, "SMM");
             break;
-        case 'ChainSulting':
-            handleSendResponse(chatId, bot, Messages.ChainSluting_Message);
+        case 'PPC':
+            handleSendResponse(chatId, bot, Messages.DIGITAL_MARKETING_PPC, "PPC");
             break;
-        case 'CMC':
-            handleSendResponse(chatId, bot, Messages.CMC_Message);
-            break;    
-        case 'CG':
-            handleSendResponse(chatId, bot, Messages.CG_Message);
+        case 'Email Marketing':
+            handleSendResponse(chatId, bot, Messages.DIGITAL_MARKETING_Email_Marketing, "Email Marketing");
             break;
-        case 'JoinGroup':
-        case 'JoinGroup':
-            JoinGroup(chatId, user,bot);
+        case 'Affiliate Marketing':
+            handleSendResponse(chatId, bot, Messages.DIGITAL_MARKETING_Affiliate_Marketing, "Affiliate Marketing");
+
+
+        // Cases for custom software development
+        case 'Custom Software Development':
+            handleSendResponse(chatId, bot, Messages.CUSTOM_SOFTWARE_DEVELOPMENT_Software_Development, "Software Development");
             break;
-         
-        case 'create_group':
-            createNewGroup(chatId,query,user,bot);
+        case 'Custom Web Development':
+            handleSendResponse(chatId, bot, Messages.CUSTOM_SOFTWARE_DEVELOPMENT_Custom_Web_Development, "Custom Web Development");
             break;
-        // Add cases for other marketing options similarly
+        case 'Ecommerce Solutions':
+            handleSendResponse(chatId, bot, Messages.CUSTOM_SOFTWARE_DEVELOPMENT_Ecommerce_Solutions, "Ecommerce Solutions");
+            break;
+        case 'API Development':
+            handleSendResponse(chatId, bot, Messages.CUSTOM_SOFTWARE_DEVELOPMENT_API_Development, "API Development");
+            break;
+        case 'Database Design & Optimization':
+            handleSendResponse(chatId, bot, Messages.CUSTOM_SOFTWARE_DEVELOPMENT_Database_Design_Optimization, "Database Design & Optimization");
+            break;
+        case 'DevOps & Deployment':
+            handleSendResponse(chatId, bot, Messages.CUSTOM_SOFTWARE_DEVELOPMENT_DevOps_Deployment, "DevOps & Deployment");
+            break;
         default:
             break;
     }
 });
 
 function handleStart(chatId, bot) {
-    bot.sendMessage(chatId, 'Welcome to the bot! Please select an option:', {
+    bot.sendMessage(chatId, 'How can i assist you today?', {
         reply_markup: {
             inline_keyboard: SelectOptions.MAIN_OPTIONS
         }

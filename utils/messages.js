@@ -1,165 +1,36 @@
 // constants.js
 
 module.exports = {
-Trending_Message: `1. Twitter
-2. Crypto.com
-3. DEXtool Trending
-4. CMC Trending
-5. CG Trending\n
-Note: - It’s a paid service`,
 
-Twitter_Message: `Twitter\n
-1. [SuperDefi_Dao](https://twitter.com/SuperDefi_Dao)
-2. [AirdropFamTeam](https://twitter.com/airdropfamteam)
-3. [Metavers_space_](https://twitter.com/Metavers_space_)\n
-Adding more Twitter influencers’ accounts soon…
-Note: - These influencer platforms have been recommended by projects. #DYOR\n
-Explore the bot:- @collablynetworkbot`,
+    MERN_Web_Message: `Our web application development services focus on creating robust and scalable web solutions tailored to your business needs. Using the MERN stack, we build dynamic web applications with a seamless user experience.`,
 
-Telegram_Message: `Telegram\n
-1. [Airdrop_Fam](https://t.me/Airdrop_Fam)
-2. [SuperDefi_Dao](https://t.me/SuperDefi_Dao)
-3. [Metavers_space](https://t.me/Metavers_space)\n
-Adding more Telegram influencers’ accounts soon…
-Note: - These influencer platforms have been recommended by projects.#DYOR\n
-Explore the bot:- @collablynetworkbot`,
+    MERN_Mobile_Message: `Transform your ideas into intuitive mobile applications with our mobile app development services. Whether it's iOS or Android, we leverage the power of the MERN stack to deliver high-performance mobile apps that engage your users.`,
 
-Youtube_Message:`Youtube\n
-1. [Youtube video link1](https://www.youtube.com/watch?v=wcIUNNVCXxc)
-2. [Youtube video link2](https://www.youtube.com/watch?v=ZfvfCmUaYxk)
-3. [Youtube video link3](https://youtube.com/c/DavidinCrypto)
-4. [Youtube video link4](https://www.youtube.com/watch?v=UWsmCTj97K8)\n
-Adding more Youtube influencers’ accounts soon…
-Note: - These influencer platforms have been recommended by projects.#DYOR\n
-Explore the bot:- @collablynetworkbot`,
+    MERN_API_Message: `Unlock the potential of your applications with our API development services. We design and develop RESTful APIs using Node.js and Express.js, enabling seamless communication between your front-end and back-end systems.`,
 
-BinanceAMA_Message: `Binance AMA \n
-1. [binance link](https://www.binance.com/en/live/u/23559312)\n    
-Adding more Binance AMA influencers’ accounts soon…
-Note: - These influencers’ platforms have been recommended by projects. #DYOR\n
-Explore the bot:- @collablynetworkbot`,
+    MERN_UI_UX_Message: `Elevate your digital presence with our UI/UX design services. Our team of designers crafts captivating user interfaces and enriching user experiences that resonate with your audience, ensuring maximum engagement and satisfaction.`,
 
-TwitterAMA_Message : `Twitter AMA \n
-1. [Twitter AMA Link](https://twitter.com/CryptoPanda_gl)\n
-Adding more Twitter influencers’ accounts soon…
-Note: - These influencers’ platforms have been recommended by projects. #DYOR\n
-Explore the bot:- @collablynetworkbot`,
 
-TelegramAMA_Message : `Telegram AMA \n
-1. [Telegram AMA Link](https://t.me/cryptopandaglobal)\n
-Adding more Telegram influencers’ accounts soon…
-Note: - These influencers’ platforms have been recommended by projects. #DYOR\n
-Explore the bot:- @collablynetworkbot`,
+    BLOCKCHAIN_DEVELOPMENT_DEX: `Decentralized Exchange (DEX) development enables peer-to-peer trading of digital assets without the need for intermediaries. With our expertise, we build secure and efficient DEX platforms.`,
+    BLOCKCHAIN_DEVELOPMENT_Private_Public_Blockchain: `Whether you need a private or public blockchain solution, we've got you covered. Our blockchain development services include designing, implementing, and maintaining customized blockchain networks tailored to your requirements.`,
+    BLOCKCHAIN_DEVELOPMENT_DApps: `Decentralized Applications (DApps) leverage blockchain technology to provide secure and transparent solutions across various industries. We specialize in developing DApps that offer real-world utility and value to users.`,
+    BLOCKCHAIN_DEVELOPMENT_CEX: `Centralized Exchanges (CEX) serve as traditional platforms for buying, selling, and trading cryptocurrencies. Our team develops robust CEX platforms with advanced features and security measures to ensure a seamless trading experience.`,
+    BLOCKCHAIN_DEVELOPMENT_DeFi: `Decentralized Finance (DeFi) solutions are revolutionizing the traditional financial landscape by offering transparent and inclusive financial services. We develop DeFi protocols and platforms that empower users to access a wide range of financial services.`,
+    BLOCKCHAIN_DEVELOPMENT_CeFi: `Centralized Finance (CeFi) bridges the gap between traditional finance and blockchain technology, offering users a familiar interface with the benefits of decentralization. Our CeFi solutions provide secure and user-friendly financial services.`,
+    BLOCKCHAIN_DEVELOPMENT_Crypto: `Crypto wallets play a crucial role in managing digital assets securely. Our blockchain development team creates feature-rich crypto wallets with robust security measures to safeguard your assets and provide a seamless user experience.`,
+    BLOCKCHAIN_DEVELOPMENT_Bridge: `Blockchain bridges facilitate interoperability between different blockchain networks, enabling the seamless transfer of assets and data. We design and implement scalable and secure blockchain bridges to connect disparate blockchain ecosystems.`,
 
-BSC_Station_Message : `BSC Station \n
-Projects applying for IDO/INO on our platform are required to meet these criteria:-\n                         
-1. The project must have at least a testing product or complete product
-2. The project must have creditable backers or advisors
-3. The project must have decent tokenomics
-4. The team must have internal development and marketing team
-5. The team must have experience in blockchain industry
-6. The team must have at least 3 members KYC-able
-7. The team must aspire to develop the project in long term\n
-Fee - 5% success fee`,
+    DIGITAL_MARKETING_SEO: `Search Engine Optimization (SEO) is crucial for improving your website's visibility in search engine results pages (SERPs). Our SEO services focus on optimizing your website to rank higher organically and drive targeted traffic.`,
+    DIGITAL_MARKETING_SEM: `Search Engine Marketing (SEM) involves paid advertising to increase your website's visibility in search engine results pages (SERPs). Our SEM strategies help you reach your target audience effectively and drive relevant traffic to your website.`,
+    DIGITAL_MARKETING_SMM: `Social Media Marketing (SMM) is essential for building brand awareness and engaging with your audience on social media platforms. Our SMM services help you create and execute effective social media campaigns to achieve your business goals.`,
+    DIGITAL_MARKETING_PPC: `Pay-Per-Click (PPC) advertising allows you to display ads on various online platforms and pay only when users click on them. Our PPC services help you maximize your ROI by targeting the right audience and optimizing your ad campaigns.`,
+    DIGITAL_MARKETING_Email_Marketing: `Email Marketing remains one of the most effective channels for nurturing leads and engaging with your audience. Our Email Marketing services help you create personalized and engaging email campaigns to drive conversions and build customer relationships.`,
+    DIGITAL_MARKETING_Affiliate_Marketing: `Affiliate Marketing is a performance-based marketing strategy where affiliates promote your products or services in exchange for a commission. Our Affiliate Marketing services help you build and manage successful affiliate programs to increase sales and reach new customers.`,
 
-Kommunitas_Message : `Kommunitas \n
-To understand how we can best collaborate, could you fill out this quick assessment form? It'll help us understand your project in-depth and tailor our collaboration discussions effectively and it will be later used as a Research Report Summary for your project (Sample)\n\n
-Kommunitas Assessment Form: \n 
-https://forms.gle/2C1qkrptQoLr4Voy5 \n
-Once you've filled it out, we can schedule a one-on-one call. It'll be an opportunity for us to delve deeper, explore how an IKO with Kommunitas can benefit your project, and address any queries you might have.`,
-
-BullPerks_Message : `BullPerks \n
-📌You can tell them to fill the form here:-\n
-https://bullperks.com/bullperks-ido-application-form/`,
-
-Binstarter_Message : `Binstarter \n
-📌Team should be doxxed.`,
-
-Gempad_Message : `Gempad \n
-📌GEMPAD GENERAL INFORMATION & SERVICE FEES\n
-👉 There are no terms from our side since our launchpad is decentralised.\n
-You have the full control over the sale and everything runs through the smart contracts on our part. ✅\n
-You are the one to list a sale, you choose a date when the sale starts and when it ends, the softcap (minimum amount to raise in order for the sale to be successful) hardcap (maximum you can raise; you can also have a sale without the hardcap and you just raise as much as you raise until the sale is live), price of the tokens and all the other details.\n
-You will also be the one to receive the funds once the sale ends directly on your wallet as we never get that money ourselves so it's all automatic ✅`,
-
-PinkSale_Message : `PinkSale \n
-📌 Contact us & process for Presale at PinkSale platform.`,
-
-GateIo_Message : `Gate.io \n
-For Gate.io listing, the project needs to go through a review process. Project assessment team is available in Contact. Once the project gets selected, the group will be created with a core team.
-It's a 3rd party paid service. Success Fee to be discussed later`,
-
- 
-GateIo_Message : `Gate.io \n
-For Gate.io listing, the project needs to go through a review process. Project assessment team is available in Contact. Once the project gets selected, the group will be created with a core team.
-It's a 3rd party paid service. Success Fee to be discussed later`,
-
-Bitgat_Message : `Bitget \n
-Please discuss with Bitget - Business Development Manager for the Listing fee. Click on the Contact button to connect with the Bitget Team.`,
-
-Bybit_Message : `Bybit \n
-For Bybit listing, the project needs to go through a review process. Project assessment team is available in Contact. Once the project gets selected, the group will be created with a core team.\n
-It's a 3rd party paid service. Marketing & Success Fee to be discussed later.`,
-
-MEXC_Message : `MEXC \n
-Please discuss with Bitget - Business Development Manager for the Listing fee. Click on the Contact button to connect with the Bitget Team`,
-
-XTCom_Message : `XT.com\n 
-Please discuss with the XT.com - Business Development Manager for the Listing fee. Click on the Contact button to connect with XT.com Team.`,
-
-LBank_Message : `LBank \n
-Please discuss with the Lbank - Business Development Manager for the Listing fee. Click on the Contact button to connect with Lbank Team.`,
-
-Bitmart_Message : `Bitmart \n
-Please discuss with the Bitmart - Business Development Manager for the Listing fee. Click on the Contact button to connect with Bitmart Team.`,
-
-Coinstore_Message : `Coinstore\n 
-Please discuss with the Coinstore - Business Development Manager for the Listing fee. Click on the Contact button to connect with Coinstore Team.`,
-
-Bitrue_Message : `Bitrue \n
-Please discuss with the Bitrue - Business Development Manager for the Listing fee. Click on the Contact button to connect with Bitrue Team.`,
-
-AveIo_Message: `Ave.io \n
-A Popular Chinese DEX Platform`,
-
-CLS_Message: `CLS \n
-Our Website: - https://www.cls.global
-Contact us for our market Making services.`,
-
-Gotbit_Message: `Gotbit \n
-Our Website: - https://www.cls.global
-Contact us for our market Making services.`,
-
-AveIo_Message: `Ave.io \n
-A Popular Chinese DEX Platform`,
-
-BitcoinGape_Message: `BitcoinGape \n 
-We cover all news media platforms.`,
-
-Certik_Message: `Certik \n
-CertiK is Web3's leading smart contract auditor and provides a comprehensive suite of tools to secure the industry at scale.`,
-
-Hacken_Message: `Hacken \n
-Hacken is a trusted blockchain security auditor on a mission to make Web3 a safer place by contributing to security standards.`,
-
-QuillsAudit_Message: `QuillsAudit 
-QuillAudits is a trusted Smart Contract Audit platform. Our comprehensive security auditing lets you launch your Web3 project with confidence.`,
-
-CoinScope_Message: `CoinScope \n
-Coinscope is a Web3 platform connecting blockchain projects and crypto investors, offering early access to tokens pre-listing on major platforms like CoinMarketCap or Coingecko and audit the projects.`,
-
-SlowMist_Message: `SlowMist \n
-SlowMist is a leading blockchain security firm founded in January 2018 by a team with over a decade of network security experience.`,
-
-ChainSluting_Message: `Chainsulting\n 
-Chainsulting is a Web3 Software Development, Consulting and Security company, on the subject of Distributed Ledger Technology (DLT) & Digital Assets.`,
-
-CMC_Message: `CMC \n
-For CMC & CG listing, you can directly connect with the agency. A few of our partner projects have shared the contact details with us\n
-Note: - It’s a paid service.`,
-
-CG_Message: `CoinGecko \n
-For CMC & CG listing, you can directly connect with the agency. A few of our partner projects have shared the contact details with us.\n
-Note: - It’s a paid service.`,
-
+    CUSTOM_SOFTWARE_DEVELOPMENT_Software_Development: `Our custom software development services empower businesses to build tailored solutions that address their unique needs and challenges. From concept to deployment, we guide you through every step of the development process to ensure your software delivers maximum value.`,
+    CUSTOM_SOFTWARE_DEVELOPMENT_Custom_Web_Development: `Custom Web Development involves creating bespoke web applications tailored to your specific requirements. Our team of experts leverages cutting-edge technologies and best practices to deliver high-quality web solutions that drive results.`,
+    CUSTOM_SOFTWARE_DEVELOPMENT_Ecommerce_Solutions: `Ecommerce Solutions enable businesses to sell their products or services online, reaching a global audience. Our Ecommerce development services cover everything from website design and development to payment integration and inventory management, ensuring a seamless online shopping experience for your customers.`,
+    CUSTOM_SOFTWARE_DEVELOPMENT_API_Development: `API Development is essential for enabling seamless communication between different software systems and applications. Our API development services focus on designing, building, and integrating robust APIs that facilitate data exchange and functionality across your ecosystem.`,
+    CUSTOM_SOFTWARE_DEVELOPMENT_Database_Design_Optimization: `Database Design & Optimization is critical for ensuring your applications perform efficiently and scale seamlessly. Our experts design and optimize databases to handle large volumes of data while maintaining high performance and reliability.`,
+    CUSTOM_SOFTWARE_DEVELOPMENT_DevOps_Deployment: `DevOps & Deployment practices streamline the software development lifecycle, from coding and testing to deployment and operations. Our DevOps services help you automate processes, improve collaboration, and accelerate time-to-market for your applications.`
 };
