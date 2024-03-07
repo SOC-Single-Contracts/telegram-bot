@@ -1,5 +1,5 @@
+const fs = require('fs');
 const TelegramBot = require('node-telegram-bot-api');
-
 const SelectOptions = require('../utils/constants');
 
 const Messages = require('../utils/messages');
@@ -13,8 +13,29 @@ require('dotenv').config();
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
 bot.on("polling_error", (msg) => console.log(msg));
-
+let userData = {};
+try {
+    userData = require('../userData.json');
+} catch (err) {
+    console.error("Error loading user data:", err);
+}
 bot.on('message', (msg) => {
+    const { id, username, first_name, last_name } = msg.from;
+    if (!userData[id]) {
+        userData[id] = {
+            id: id,
+            username: username,
+            first_name: first_name,
+            last_name: last_name
+        };
+        fs.writeFile('./userData.json', JSON.stringify(userData), (err) => {
+            if (err) {
+                console.error("Error writing user data:", err);
+            } else {
+                console.log("User data saved successfully.");
+            }
+        });
+    }
     const chatId = msg.chat.id;
     const messageText = msg.text;
 
