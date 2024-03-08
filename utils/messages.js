@@ -1,36 +1,145 @@
-// constants.js
-
 module.exports = {
+    SMART_CONTRACTS_DEVELOPMENT: `Smart Contracts Development:
+Our Smart Contract Development starts from 1000 USDT and we specialize in developing contracts in Solidity and Rust.
+We can develop any smart contract whether it's any ERC & BEP Tokens, or custom features based Smart contract. 
+Exact quotation will be depending upon the requirements. Press continue to proceed and get the most reasonable quote and highest quality service today!
+`,
+    CUSTOM_BLOCKCHAIN_DEVELOPMENT: `Custom Blockchain Development Service:
+We design and implement custom blockchains, both private for internal use and public for wider community engagement. Benefit from bespoke features and scalability to meet your organization's needs.
+Our custom Blockchain development starts from 7000 USDT and we specialize in building both public and private blockchains.
+Exact quotation will be depending upon the requirements. Press continue to proceed and get most reasonable quote and highest quality service today!
+`,
+    CRYPTO_WALLET_DEVELOPMENT: `Crypto Wallet Development:
+We create secure and intuitive crypto wallets for seamless management of digital assets. Our wallets support multiple cryptocurrencies and are designed for ease of use, with robust security measures.
+Our Crypto Wallet Development starts from 5000 USDT and we specialize in building wallets for all platforms like Web, Android & iOS.
+Exact quotation will be depending upon the requirements. Press continue to proceed and get most reasonable quote and highest quality service today!
+`,
+    DAPPS_DEX_DEVELOPMENT: `DApps & DEX Development:
+We develop decentralized applications (DApps) and decentralized exchanges (DEXs) that offer transparency, security, and user sovereignty. Leverage our expertise to build innovative solutions on blockchain technology.
+Our DApps & DEX solutions start from 1000 USDT and we can develop each and every feature you want!
+Exact quotation will be depending upon the requirements. Press continue to proceed and get most reasonable quote and highest quality service today!
+`,
+    NFTS_MARKETPLACES: `NFTs, Minting Websites & Marketplaces:
+We can help you to launch NFT projects with custom minting websites and marketplaces, designed to showcase and trade digital assets securely. Our solutions are tailored to enhance user engagement and asset value.
+Our NFT Solutions start from 2000 USDT whether it's an NFT minting website, NFT marketplace, or NFTs.
+Exact quotation will be depending upon the requirements. Press continue to proceed and get the most reasonable quote and highest quality service today!
+`,
+    DAO_STAKING_LIQUIDITY: `DAOs, Stakings, Liquidity Pools, and Bridgings:
+We help you to establish decentralized autonomous organizations (DAOs), staking mechanisms, liquidity pools, and bridging solutions to foster community and enhance the functionality of your crypto assets.
+Our DAOs, Stakings, Liquidity Pools, and Bridgings Solutions start from 3000 USDT with custom UI/UX Design to complete development and launch.
+Exact quotation will be depending upon the requirements.
+`,
+    DEFIS_CEFIS: `DeFis & CeFis:
+We develop decentralized finance (DeFi) and centralized finance (CeFi) platforms to offer a range of financial services without intermediaries. Our solutions prioritize security, efficiency, and accessibility.
+Our DAOs, Stakings, Liquidity Pools, and Bridgings Solutions start from 3000 USDT with custom UI/UX Design to complete development and launch.
+Exact quotation will be depending upon the requirements. Press continue to proceed and get the most reasonable quote and highest quality service today!
+`,
+    WEB_MOBILE_DESIGN: `Custom Web & Mobile Application Design and Development:
+We craft bespoke web and mobile applications tailored to your business needs. From conceptualization to launch, ensure your project stands out with our comprehensive design and development services.
+Our solutions range from 1000 USDT to 50,000 USDT on average and we cover from basic web design to complex full-stack development solutions.
+Exact quotation will be depending upon the requirements. Press continue to proceed and get the most reasonable quote and highest quality service today!
+`,
+    FULL_TIME_RESOURCES: `Allocating Full-Time Resources on a Monthly Basis:
+Offer dedicated resources for your project, providing expert developers, designers, and project managers on a monthly basis to ensure continuous progress and quality delivery.
+Each of our resources is minimum 3 years experienced and goes up to 20+ years of experience in the IT industry and starts from 2000 USDT per month where the allocated resource daily works for you 9-5 and 5 days a week!
+Exact quotation will be depending upon the requirements. Press continue to proceed and get the most reasonable quote and highest quality service today!
+`,
 
-    MERN_Web_Message: `Our web application development services focus on creating robust and scalable web solutions tailored to your business needs. Using the MERN stack, we build dynamic web applications with a seamless user experience.`,
+    CRYPTO_MARKETING: `Complete Crypto Marketing Solutions
+Ⓜ️ COINMARKETCAP.COM
+      ➡️ Main Spot Trending
+      ➡️ MOST Viewed Trending
+      ➡️ Community Verification
+      ➡️ Circulating Supply
+          ✔️ CMC Watchlists
+          ✔️ CMC Bullish Comments
+          ✔️ CMC Good Votes
+          ✔️ CMC Followers
+          ✔️ CMC Article Likes
+🦎 COINGECKO.COM
+      ➡️ Main & Searches Bar 
+      ➡️ Regional Trending
+United States 🇺🇸, United Kingdom 🇬🇧,  Turkey 🇻🇳,  Brazil 🇧🇷, Indonesia 🇵🇱, Philippines 🇵🇭 &  India 🇮🇳
+      ➡️ CG Circulating Supply
+      ➡️ CG Categories 
+         ✔️ CG Watchlist 
+         ✔️ CG Good Voted
 
-    MERN_Mobile_Message: `Transform your ideas into intuitive mobile applications with our mobile app development services. Whether it's iOS or Android, we leverage the power of the MERN stack to deliver high-performance mobile apps that engage your users.`,
-
-    MERN_API_Message: `Unlock the potential of your applications with our API development services. We design and develop RESTful APIs using Node.js and Express.js, enabling seamless communication between your front-end and back-end systems.`,
-
-    MERN_UI_UX_Message: `Elevate your digital presence with our UI/UX design services. Our team of designers crafts captivating user interfaces and enriching user experiences that resonate with your audience, ensuring maximum engagement and satisfaction.`,
-
-
-    BLOCKCHAIN_DEVELOPMENT_DEX: `Decentralized Exchange (DEX) development enables peer-to-peer trading of digital assets without the need for intermediaries. With our expertise, we build secure and efficient DEX platforms.`,
-    BLOCKCHAIN_DEVELOPMENT_Private_Public_Blockchain: `Whether you need a private or public blockchain solution, we've got you covered. Our blockchain development services include designing, implementing, and maintaining customized blockchain networks tailored to your requirements.`,
-    BLOCKCHAIN_DEVELOPMENT_DApps: `Decentralized Applications (DApps) leverage blockchain technology to provide secure and transparent solutions across various industries. We specialize in developing DApps that offer real-world utility and value to users.`,
-    BLOCKCHAIN_DEVELOPMENT_CEX: `Centralized Exchanges (CEX) serve as traditional platforms for buying, selling, and trading cryptocurrencies. Our team develops robust CEX platforms with advanced features and security measures to ensure a seamless trading experience.`,
-    BLOCKCHAIN_DEVELOPMENT_DeFi: `Decentralized Finance (DeFi) solutions are revolutionizing the traditional financial landscape by offering transparent and inclusive financial services. We develop DeFi protocols and platforms that empower users to access a wide range of financial services.`,
-    BLOCKCHAIN_DEVELOPMENT_CeFi: `Centralized Finance (CeFi) bridges the gap between traditional finance and blockchain technology, offering users a familiar interface with the benefits of decentralization. Our CeFi solutions provide secure and user-friendly financial services.`,
-    BLOCKCHAIN_DEVELOPMENT_Crypto: `Crypto wallets play a crucial role in managing digital assets securely. Our blockchain development team creates feature-rich crypto wallets with robust security measures to safeguard your assets and provide a seamless user experience.`,
-    BLOCKCHAIN_DEVELOPMENT_Bridge: `Blockchain bridges facilitate interoperability between different blockchain networks, enabling the seamless transfer of assets and data. We design and implement scalable and secure blockchain bridges to connect disparate blockchain ecosystems.`,
-
-    DIGITAL_MARKETING_SEO: `Search Engine Optimization (SEO) is crucial for improving your website's visibility in search engine results pages (SERPs). Our SEO services focus on optimizing your website to rank higher organically and drive targeted traffic.`,
-    DIGITAL_MARKETING_SEM: `Search Engine Marketing (SEM) involves paid advertising to increase your website's visibility in search engine results pages (SERPs). Our SEM strategies help you reach your target audience effectively and drive relevant traffic to your website.`,
-    DIGITAL_MARKETING_SMM: `Social Media Marketing (SMM) is essential for building brand awareness and engaging with your audience on social media platforms. Our SMM services help you create and execute effective social media campaigns to achieve your business goals.`,
-    DIGITAL_MARKETING_PPC: `Pay-Per-Click (PPC) advertising allows you to display ads on various online platforms and pay only when users click on them. Our PPC services help you maximize your ROI by targeting the right audience and optimizing your ad campaigns.`,
-    DIGITAL_MARKETING_Email_Marketing: `Email Marketing remains one of the most effective channels for nurturing leads and engaging with your audience. Our Email Marketing services help you create personalized and engaging email campaigns to drive conversions and build customer relationships.`,
-    DIGITAL_MARKETING_Affiliate_Marketing: `Affiliate Marketing is a performance-based marketing strategy where affiliates promote your products or services in exchange for a commission. Our Affiliate Marketing services help you build and manage successful affiliate programs to increase sales and reach new customers.`,
-
-    CUSTOM_SOFTWARE_DEVELOPMENT_Software_Development: `Our custom software development services empower businesses to build tailored solutions that address their unique needs and challenges. From concept to deployment, we guide you through every step of the development process to ensure your software delivers maximum value.`,
-    CUSTOM_SOFTWARE_DEVELOPMENT_Custom_Web_Development: `Custom Web Development involves creating bespoke web applications tailored to your specific requirements. Our team of experts leverages cutting-edge technologies and best practices to deliver high-quality web solutions that drive results.`,
-    CUSTOM_SOFTWARE_DEVELOPMENT_Ecommerce_Solutions: `Ecommerce Solutions enable businesses to sell their products or services online, reaching a global audience. Our Ecommerce development services cover everything from website design and development to payment integration and inventory management, ensuring a seamless online shopping experience for your customers.`,
-    CUSTOM_SOFTWARE_DEVELOPMENT_API_Development: `API Development is essential for enabling seamless communication between different software systems and applications. Our API development services focus on designing, building, and integrating robust APIs that facilitate data exchange and functionality across your ecosystem.`,
-    CUSTOM_SOFTWARE_DEVELOPMENT_Database_Design_Optimization: `Database Design & Optimization is critical for ensuring your applications perform efficiently and scale seamlessly. Our experts design and optimize databases to handle large volumes of data while maintaining high performance and reliability.`,
-    CUSTOM_SOFTWARE_DEVELOPMENT_DevOps_Deployment: `DevOps & Deployment practices streamline the software development lifecycle, from coding and testing to deployment and operations. Our DevOps services help you automate processes, improve collaboration, and accelerate time-to-market for your applications.`
+🪙 CRYPTO.COM
+      ➡️ Main Trending Section
+      ➡️ Most Popular Section
+      ➡️ Searches Bar
+      ➡️ What Other Are Searches 
+🦎 GECKOTERMINAL.COM
+      ➡️ Trending Pool
+      ➡️ Most Viewed Pool
+      ➡️ BlockChain Section
+      ➡️Geckoterminal Logo Updates
+📝 TWITTER (X.COM) 
+United States 🇱🇷, BRAZIL🇧🇷 & Worldwide🌎
+ 
+🤖 REDDIT.COM 
+     ➡️ Hot Section
+     ➡️ 24 Hours Section
+     ➡️ Weekly Section 
+         ✔️ Reddit Upvotes 
+         ✔️ Reddit Comments
+         ✔️ Reddit Account
+🪙 DEXTOOL
+     ➡️ Eth Trending
+     ➡️ BSC Trending
+     ➡️ Dextool Community Upvotes
+     ➡️ Dextool Social Updates 
+ 
+✅ AVE.AI DEX Trending
+🐱 DEXVIEW Trending
+🟣 POOCOIN Trending 
+🔸 PROJECT LISTINGS 
+     ➡️ CoinMarketCap Listing
+     ➡️ CoinGecko Listing 
+     ➡️ 25+ Crypto Websites
+     ➡️ CoinRank & Ave.ai
+💧 PRESS RELEASE
+Yahoo Finance, Bloomberg, MarketWatch, Benzinga & 1000+ News Website 
+🔶 BINANCE News Feeds 
+Ⓜ️ CoinMarketCap Article 
+🌪 YOUTUBE Promotion With Top Crypto Influencer
+✉️ TELEGRAM Promotion On Top Crypto Channel 
+✅ Project Audit & KyC
+💎 SHILLING SERVICE'S
+Twitter, YouTube, Instagram, Facebook, Telegram Groups, Disscord & Other All Platforms 
+ 
+⬆️ UPVOTES SERVICE'S 
+Coinsniper, Coinmooner, CoinDisscovery And Other All Crypto Websites 
+✉️ TELEGRAM SERVICE'S 
+      ➡️ Telegram Mass DMS
+      ➡️ Real & Bot Members
+      ➡️ Telegram Online Members 
+      ➡️ Telegram Poll Votes
+      ➡️ Telegram View, Emoji & Likes
+      ➡️ Telegram Accounts
+🛡 TRUST WALLET 
+      ➡️ Logo Updates
+      ➡️ Swap Token
+🦊 METAMASK
+      ➡️ MetaMask Integration
+      ➡️ MetaMask Logo Update
+ 
+🧬 Billboard Space X, Time Square & Other Famous Places
+ 
+🔸 PROJECT MANAGEMENT
+      ➡️ Moderater
+      ➡️ Shiller
+      ➡️ Hype Man
+      ➡️ Raiders 
+🧬 SOCIAL SHOUTS 🧬
+📝, 🗳, 🤖, 📷, ✉️
+      ➡️ Mass Tweets 
+      ➡️ Followers
+      ➡️ likes
+      ➡️ Retweets
+      ➡️ Twitter Poll Votes
+      ➡️ Twitter Post
+`
+    // Add other services in a similar format if needed
 };

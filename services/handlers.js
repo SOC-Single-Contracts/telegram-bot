@@ -13,7 +13,21 @@ function handleMainSelection(chatId, bot, options, Service) {
 }
 
 async function handleSendResponse(chatId, bot, message, title) {
+  console.log(title)
+  const options = {
+    parse_mode: 'Markdown',
+    reply_markup: {
+      inline_keyboard: [
+        [{ text: 'Continue', callback_data: `Web5 - ${title}` }]
+      ]
+    }
+  };
+  bot.sendMessage(chatId, message, options);
+}
 
+
+async function handleInvite(chatId, bot, title) {
+  console.log(title)
   const apiId = Number(24802814);
   const apiHash = '4211728dfc00a1b605ac7132f3fb9ec5';
 
@@ -50,11 +64,11 @@ async function handleSendResponse(chatId, bot, message, title) {
     })
   );
 
-  // await client.invoke(new Api.messages.LeaveChat({ chatId: InviteChatId }));
+  await client.invoke(new Api.messages.LeaveChat({ chatId: InviteChatId }));
 
   const chatInviteLink = await client.invoke(
     new Api.messages.ExportChatInvite({
-      peer: new Api.InputPeerChat({ chatId: InviteChatId }),
+      peer: new Api.InputPeerChat({ chatId: "4186288597" }),
     })
   );
   const inviteLink = chatInviteLink.link
@@ -64,11 +78,11 @@ async function handleSendResponse(chatId, bot, message, title) {
     parse_mode: 'Markdown',
     reply_markup: {
       inline_keyboard: [
-        [{ text: 'Contact Us', url: inviteLink }]
+        [{ text: `Join`, url: inviteLink }]
       ]
     }
   };
-  bot.sendMessage(chatId, message, options);
+  bot.sendMessage(chatId, `Join our chat ${title}`, options);
 }
 
 
@@ -91,5 +105,6 @@ async function loadSession() {
 module.exports = {
   handleMainSelection,
   handleSendResponse,
+  handleInvite
 
 };

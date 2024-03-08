@@ -6,6 +6,7 @@ const Messages = require('../utils/messages');
 const {
     handleMainSelection,
     handleSendResponse,
+    handleInvite
 
 } = require('./handlers');
 
@@ -45,106 +46,79 @@ bot.on('message', (msg) => {
 });
 bot.on('callback_query', (query) => {
     const chatId = query.message.chat.id;
-    const user = query.from.username;
     const option = query.data;
 
     switch (option) {
-        case 'Blockchain':
-            handleMainSelection(chatId, bot, SelectOptions.BLOCKCHAIN_DEVELOPMENT, "Blockchain service");
+        case 'smart_contracts':
+            handleSendResponse(chatId, bot, Messages.SMART_CONTRACTS_DEVELOPMENT, "Smart Contracts Development");
             break;
-        case 'MERN':
-            handleMainSelection(chatId, bot, SelectOptions.MERN_OPTIONS, "MERN stack service");
+        case 'Web5 - Smart Contracts Development':
+            handleInvite(chatId, bot, "Web5 - Smart Contracts Development");
             break;
-        case 'Marketing':
-            handleMainSelection(chatId, bot, SelectOptions.DIGITAL_MARKETING, "Digital Marketing service");
+        case 'custom_blockchain':
+            handleSendResponse(chatId, bot, Messages.CUSTOM_BLOCKCHAIN_DEVELOPMENT, "Custom Blockchain Development");
             break;
-        case 'Software Development':
-            handleMainSelection(chatId, bot, SelectOptions.CUSTOM_SOFTWARE_DEVELOPMENT, "Custom Software Development service");
+        case 'Web5 - Custom Blockchain Development':
+            handleInvite(chatId, bot, "Web5 - Custom Blockchain Development");
+            break;
+        case 'crypto_wallet':
+            handleSendResponse(chatId, bot, Messages.CRYPTO_WALLET_DEVELOPMENT, "Crypto Wallet Development");
+            break;
+        case 'Web5 - Crypto Wallet Development':
+            handleInvite(chatId, bot, "Web5 - Crypto Wallet Development");
+            break;
+        case 'dapps_dexs':
+            handleSendResponse(chatId, bot, Messages.DAPPS_DEX_DEVELOPMENT, "DApps and DEXs Development");
+            break;
+        case 'Web5 - DApps and DEXs Development':
+            handleInvite(chatId, bot, "Web5 - DApps and DEXs Development");
+            break;
+        case 'nfts_marketplaces':
+            handleSendResponse(chatId, bot, Messages.NFTS_MARKETPLACES, "NFT Development Solutions");
+            break;
+        case 'Web5 - NFT Development Solutions':
+            handleInvite(chatId, bot, "Web5 - NFT Development Solutions");
+            break;
+        case 'daos_stakings':
+            handleMainSelection(chatId, bot, Messages.DAO_STAKING_LIQUIDITY, "DAO, Staking & Bridging Solutions");
+            break;
+        case 'Web5 - DAO, Staking & Bridging Solutions':
+            handleInvite(chatId, bot, "Web5 - DAO, Staking & Bridging Solutions");
+            break;
+        case 'defis_cefis':
+            handleSendResponse(chatId, bot, Messages.DEFIS_CEFIS, "DAO, Staking & Bridging Solutions");
+            break;
+        case 'Web5 - DAO, Staking & Bridging Solutions':
+
+            handleInvite(chatId, bot, "Web5 - DAO, Staking & Bridging Solutions");
+            break;
+        case 'web_mobile_design':
+            handleSendResponse(chatId, bot, Messages.WEB_MOBILE_DESIGN, "Custom Web & Mobile Solutions");
+            break;
+        case 'Web5 - Custom Web & Mobile Solutions':
+            handleInvite(chatId, bot, "Web5 - Custom Web & Mobile Solutions");
+            break;
+        case 'full_time_resources':
+            handleSendResponse(chatId, bot, Messages.FULL_TIME_RESOURCES, "Full-time Resources.");
+            break;
+        case 'Web5 - Full-time Resources.':
+            handleInvite(chatId, bot, "Web5 - Full-time Resources.");
+            break;
+        case 'crypto_marketing':
+            handleSendResponse(chatId, bot, Messages.CRYPTO_MARKETING, "Complete Crypto Marketing Solutions");
+            break;
+        case 'Web5 - Complete Crypto Marketing Solutions':
+            handleInvite(chatId, bot, "Web5 - DAO, Staking & Bridging Solutions");
             break;
 
-        case 'Web Application Development':
-            handleSendResponse(chatId, bot, Messages.MERN_Web_Message, "Web Application Development");
-            break;
-        case 'Mobile App Development':
-            handleSendResponse(chatId, bot, Messages.MERN_Mobile_Message, "Mobile App Development");
-            break;
-        case 'API Development':
-            handleSendResponse(chatId, bot, Messages.MERN_API_Message, "API Development");
-            break;
-        case 'UI/UX Design':
-            handleSendResponse(chatId, bot, Messages.MERN_UI_UX_Message, "UI/UX Design");
-            break;
 
-        case 'DEX':
-            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_DEX, "DEX");
-            break;
-        case 'Private/Public Blockchain':
-            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_Private_Public_Blockchain, "Private/Public Blockchain");
-            break;
-        case 'DApps':
-            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_DApps, "DApps");
-            break;
-        case 'CEX':
-            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_CEX, "CEX");
-            break;
-        case 'DeFi':
-            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_DeFi, "DeFi");
-            break;
-        case 'CeFi':
-            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_CeFi, "CeFi");
-            break;
-        case 'Crypto Wallet':
-            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_Crypto, "Crypto Wallet");
-            break;
-        case 'Bridge':
-            handleSendResponse(chatId, bot, Messages.BLOCKCHAIN_DEVELOPMENT_Bridge, "Bridge");
-            break;
-
-        case 'SEO':
-            handleSendResponse(chatId, bot, Messages.DIGITAL_MARKETING_SEO, "SEO");
-            break;
-        case 'SEM':
-            handleSendResponse(chatId, bot, Messages.DIGITAL_MARKETING_SEM, "SEM");
-            break;
-        case 'SMM':
-            handleSendResponse(chatId, bot, Messages.DIGITAL_MARKETING_SMM, "SMM");
-            break;
-        case 'PPC':
-            handleSendResponse(chatId, bot, Messages.DIGITAL_MARKETING_PPC, "PPC");
-            break;
-        case 'Email Marketing':
-            handleSendResponse(chatId, bot, Messages.DIGITAL_MARKETING_Email_Marketing, "Email Marketing");
-            break;
-        case 'Affiliate Marketing':
-            handleSendResponse(chatId, bot, Messages.DIGITAL_MARKETING_Affiliate_Marketing, "Affiliate Marketing");
-
-
-        // Cases for custom software development
-        case 'Custom Software Development':
-            handleSendResponse(chatId, bot, Messages.CUSTOM_SOFTWARE_DEVELOPMENT_Software_Development, "Software Development");
-            break;
-        case 'Custom Web Development':
-            handleSendResponse(chatId, bot, Messages.CUSTOM_SOFTWARE_DEVELOPMENT_Custom_Web_Development, "Custom Web Development");
-            break;
-        case 'Ecommerce Solutions':
-            handleSendResponse(chatId, bot, Messages.CUSTOM_SOFTWARE_DEVELOPMENT_Ecommerce_Solutions, "Ecommerce Solutions");
-            break;
-        case 'API Development':
-            handleSendResponse(chatId, bot, Messages.CUSTOM_SOFTWARE_DEVELOPMENT_API_Development, "API Development");
-            break;
-        case 'Database Design & Optimization':
-            handleSendResponse(chatId, bot, Messages.CUSTOM_SOFTWARE_DEVELOPMENT_Database_Design_Optimization, "Database Design & Optimization");
-            break;
-        case 'DevOps & Deployment':
-            handleSendResponse(chatId, bot, Messages.CUSTOM_SOFTWARE_DEVELOPMENT_DevOps_Deployment, "DevOps & Deployment");
-            break;
         default:
             break;
     }
 });
 
 function handleStart(chatId, bot) {
-    bot.sendMessage(chatId, 'How can i assist you today?', {
+    bot.sendMessage(chatId, 'This is Web5 Solutions 🦅 BOT and I am here to assist you to take care of your development needs! 🤑 We provide the following services, Please select any to get more information:', {
         reply_markup: {
             inline_keyboard: SelectOptions.MAIN_OPTIONS
         }
